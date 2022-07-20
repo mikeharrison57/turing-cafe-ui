@@ -14,11 +14,30 @@ class ReservationForm extends Component {
     this.setState({[event.target.name]: event.target.value}) 
   }
 
+  submitReservation = event => {
+    event.preventDefault();
+    const newReservation = {
+      id: Date.now(),
+      name: "",
+      date: "",
+      time: "",
+      number: parseInt('')
+    }
+
+    this.clearInputs();
+  }
+
+  clearInputs = () => {
+    this.setState({
+      id: '',
+      name: "",
+      date: "",
+      time: "",
+      number: ''
+    })
+  }
+
   render() {
-    console.log(this.state.name)
-    console.log(this.state.date)
-    console.log(this.state.time)
-    console.log(this.state.number)
     return (
       <form>
         <input 
@@ -42,6 +61,7 @@ class ReservationForm extends Component {
           value={this.state.time}
           onChange={event => this.handleChange(event)}
         />
+    
         <input 
           type='text'
           placeholder='Number of Guests'

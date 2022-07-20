@@ -20,6 +20,10 @@ class App extends Component {
       })
   }
 
+  addReservation = () => {
+    
+  }
+
 
   render() {
     return (
