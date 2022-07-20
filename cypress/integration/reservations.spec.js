@@ -24,6 +24,19 @@ describe('Turing Cafe Reservations', () => {
     cy.get('.time-input').type('6:00').should('have.value', '6:00')
     cy.get('.guests-input').clear().type(4).should('have.value', 4)
   })
+
+  it('should submit user info to reservations, and display new reservation on the DOM', () => {
+    cy.get('.name-input').type('Carter H.')
+    cy.get('.date-input').type('6/20')
+    cy.get('.time-input').type('7:00')
+    cy.get('.guests-input').clear().type(10)
+    cy.get('.resy-button').click()
+    cy.get('.resy-container').find('.resy-card').should('have.length', 10)
+    cy.get('.resy-card').last().contains('Carter H')
+  })
+
+  
+
 })
 
 // Write a test to check the user flow of adding a new reservation to the page.
