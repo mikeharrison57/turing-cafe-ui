@@ -15,7 +15,6 @@ class ReservationForm extends Component {
 
   handleChange = event => {
     this.setState({[event.target.name]: event.target.value}) 
-    // console.log(this.props)
   }
 
   submitReservation = event => {
@@ -42,6 +41,7 @@ class ReservationForm extends Component {
     return (
       <form>
         <input 
+          className='name-input' 
           type='text'
           placeholder='Name'
           name='name'
@@ -49,6 +49,7 @@ class ReservationForm extends Component {
           onChange={event => this.handleChange(event)}
         />
         <input 
+          className='date-input'
           type='text'
           placeholder='Date (mm/dd)'
           name='date'
@@ -56,6 +57,7 @@ class ReservationForm extends Component {
           onChange={event => this.handleChange(event)}
         />
         <input 
+          className='time-input'
           type='text'
           placeholder='Time (0:00)'
           name='time'
@@ -64,6 +66,7 @@ class ReservationForm extends Component {
         />
     
         <input 
+          className='guests-input'
           type='number'
           placeholder='Number of Guests'
           name='number'

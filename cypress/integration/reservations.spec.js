@@ -19,10 +19,11 @@ describe('Turing Cafe Reservations', () => {
   })
 
   it('should allow the user to fill out the reservation form', () => {
-    cy.get()
+    cy.get('.name-input').type('Michael').should('have.value', 'Michael')
+    cy.get('.date-input').type('5/16').should('have.value', '5/16')
+    cy.get('.time-input').type('6:00').should('have.value', '6:00')
+    cy.get('.guests-input').clear().type(4).should('have.value', 4)
   })
 })
 
-
-// Write a test that checks that when data is put into the form, the value is reflected in that form input.
 // Write a test to check the user flow of adding a new reservation to the page.
