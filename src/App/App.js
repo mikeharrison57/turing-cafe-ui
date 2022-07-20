@@ -20,8 +20,11 @@ class App extends Component {
       })
   }
 
-  addReservation = () => {
-    
+  addReservation = (newReservation) => {
+    this.setState({reservations:[
+      ...this.state.reservations,
+      newReservation
+    ]})
   }
 
 
@@ -30,7 +33,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <ReservationForm />
+          <ReservationForm addReservation={this.addReservation} />
         </div>
         <ResevationContainer reservations={this.state.reservations} />
       </div>
