@@ -1,0 +1,10 @@
+input {
+  padding: .3rem;
+  margin: 2rem;
+}
+
+.resy-button {
+  width: 9.5rem;
+  color: white;
+  background-color: teal;
+}

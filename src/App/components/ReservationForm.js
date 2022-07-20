@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/ReservationForm.css';
 
 class ReservationForm extends Component {
   state = {
@@ -40,6 +41,8 @@ class ReservationForm extends Component {
           // value={this.state.number}
           // onChange={event => this.handleChange(event)}
         />
+
+        <button className='resy-button'>Make Reservation</button>
       </form>
     )
   }
