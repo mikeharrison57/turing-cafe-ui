@@ -11,10 +11,10 @@ const ReservationCard = (props) => {
   } = props 
   return (
     <article className='resy-card'>
-      <h3>{name}</h3>
-      <p>{date}</p>
-      <p>{time}pm</p>
-      <p>Number of Guests: {number}</p>
+      <h3 className='name-input'>{name}</h3>
+      <p className='date-input'>{date}</p>
+      <p className='time-input'>{time}pm</p>
+      <p className='guests-input'>Number of Guests: {number}</p>
       <button className='cancel-button'>Cancel</button>
     </article>
   )
