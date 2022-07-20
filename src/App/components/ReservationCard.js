@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/ReservationCard.css'
 
 const ReservationCard = (props) => {
   const { 
@@ -14,6 +15,7 @@ const ReservationCard = (props) => {
       <p>{date}</p>
       <p>{time}pm</p>
       <p>Number of Guests: {number}</p>
+      <button className='cancel-button'>Cancel</button>
     </article>
   )
 }

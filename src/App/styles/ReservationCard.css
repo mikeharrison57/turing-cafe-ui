@@ -1,0 +1,15 @@
+.resy-card {
+  color: teal;
+  background-color: white;
+  border: solid 5px;
+  border-color: teal;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.cancel-button {
+  width: 10rem;
+  margin: .5rem;
+  color: white;
+  background-color: teal;
+}
